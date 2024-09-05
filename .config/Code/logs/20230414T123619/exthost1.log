@@ -1,0 +1,16 @@
+[2023-04-14 12:36:22.492] [exthost1] [info] extension host started
+[2023-04-14 12:36:22.521] [exthost1] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2023-04-14 12:36:22.521] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/out/extension
+[2023-04-14 12:36:22.605] [exthost1] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2023-04-14 12:36:22.605] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/out/main
+[2023-04-14 12:36:22.729] [exthost1] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2023-04-14 12:36:22.729] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/out/extension
+[2023-04-14 12:36:22.761] [exthost1] [info] eager extensions activated
+[2023-04-14 12:36:49.898] [exthost1] [info] extension host started
+[2023-04-14 12:36:49.911] [exthost1] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2023-04-14 12:36:49.911] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/out/extension
+[2023-04-14 12:36:49.944] [exthost1] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2023-04-14 12:36:49.944] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/out/main
+[2023-04-14 12:36:49.982] [exthost1] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2023-04-14 12:36:49.982] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/out/extension
+[2023-04-14 12:36:49.991] [exthost1] [info] eager extensions activated

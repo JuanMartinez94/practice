@@ -1,0 +1,26 @@
+logrotate state -- version 2
+"/home/student/.cache/upstart/update-notifier-crash-_var_crash__lib_systemd_systemd-journald.0.crash.log" 2023-2-2-15:6:35
+"/home/student/.cache/upstart/dbus.log" 2024-9-4-19:47:30
+"/home/student/.cache/upstart/indicator-sound.log" 2024-9-4-19:47:30
+"/home/student/.cache/upstart/indicator-keyboard.log" 2023-3-9-19:17:25
+"/home/student/.cache/upstart/window-stack-bridge.log" 2024-9-4-19:47:30
+"/home/student/.cache/upstart/update-notifier-crash-_var_crash__lib_systemd_systemd-udevd.0.crash.log" 2023-4-18-10:48:14
+"/home/student/.cache/upstart/unity-settings-daemon.log" 2024-9-4-19:47:30
+"/home/student/.cache/upstart/unity7.log" 2024-9-4-19:47:30
+"/home/student/.cache/upstart/hud.log" 2024-9-4-19:47:30
+"/home/student/.cache/upstart/ssh-agent.log" 2024-9-4-19:47:30
+"/home/student/.cache/upstart/indicator-printers.log" 2023-3-31-9:20:38
+"/home/student/.cache/upstart/bamfdaemon.log" 2023-3-9-19:17:25
+"/home/student/.cache/upstart/update-notifier-crash-_var_crash__usr_bin_compiz.1000.crash.log" 2024-9-4-19:47:30
+"/home/student/.cache/upstart/gpg-agent.log" 2024-9-4-19:47:30
+"/home/student/.cache/upstart/upstart-event-bridge.log" 2024-9-4-19:47:30
+"/home/student/.cache/upstart/update-notifier-release.log" 2024-8-27-16:24:48
+"/home/student/.cache/upstart/update-notifier-crash-_var_crash__usr_bin_compiz.1001.crash.log" 2023-3-18-15:25:32
+"/home/student/.cache/upstart/unity-panel-service.log" 2024-9-4-19:47:30
+"/home/student/.cache/upstart/gnome-keyring.log" 2023-3-9-19:17:25
+"/home/student/.cache/upstart/*.log" 2017-8-4-8:0:0
+"/home/student/.cache/upstart/indicator-session.log" 2017-8-1-13:25:28
+"/home/student/.cache/upstart/indicator-datetime.log" 2024-9-4-19:47:30
+"/home/student/.cache/upstart/gnome-keyring-ssh.log" 2024-9-4-19:47:30
+"/home/student/.cache/upstart/unicast-local-avahi.log" 2023-4-8-23:56:1
+"/home/student/.cache/upstart/indicator-power.log" 2017-8-1-13:25:28

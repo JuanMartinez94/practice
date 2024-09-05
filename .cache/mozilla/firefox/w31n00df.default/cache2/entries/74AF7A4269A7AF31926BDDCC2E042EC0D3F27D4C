@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en">
+<head>
+	<title>USC Shibboleth Single Sign-on</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="./images/favicon.ico">
+	<link rel="stylesheet" href="./style/login.css?v=1.1.5" type="text/css" media="screen,print">
+	<link rel="stylesheet" href="./style/sprite.css?v=1.1.5" type="text/css" media="screen,print"> 
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" media="all" href="./style/ie.css">
+	<![endif]-->
+</head>
+<body>
+	<div class="page-wrapper">
+		<header class="site-header">
+			<div class="site-branding">
+				<h1 class="brand-title" role="img" aria-label="University of Southern California Logo">University of Southern California</h1>
+			</div><!-- .site-branding -->
+		</header>
+		<div class="content-area narrow">
+			<div class="main" role="main">
+				<div class="wrapper">
+					<div class="container">
+						<div class="content">
+							<div class="column one">			
+								<section><p class='form-element form-error' role='alert'><strong>Sorry, your username and password do not match.</strong> Please try again or <a href='https://netid.usc.edu/account_services/forgot_password'>reset your password</a> if you've forgotten it.</p></section>
+								<h2 class="welcome"><strong>Welcome.</strong> Please sign in to continue.</h2>
+								<form id="loginform" action="/login/authuserpassword" method="post">
+									<span class="form-field-wrapper">
+										<label for="username">USC NetID (username)</label>
+										<svg class="net-id" enable-background="new 0 0 50 40" version="1.1" viewBox="0 0 50 40" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+											<path d="m49.725 36.562c-1.146-1.631-5.174-5.799-17.539-8.959-0.035-1.424-0.138-2.469-0.209-3.094 0.976-1.492 3.822-6.495 4.062-13.024v-0.174c0.139-6.877-3.854-11.009-10.871-11.289h-0.104c-0.139-0.033-0.277-0.033-0.416 0-6.945 0.349-10.87 4.447-10.766 11.289v0.208c0.278 6.492 3.091 11.458 4.063 12.99-0.069 0.625-0.173 1.67-0.208 3.094-12.154 3.126-16.255 7.19-17.434 8.823-0.521 0.694-0.347 1.7 0.348 2.223 0.278 0.209 0.59 0.312 0.938 0.312 0.52 0 0.972-0.24 1.285-0.658 0.798-1.109 4.411-4.932 16.81-7.918 0.729-0.176 1.216-0.834 1.216-1.562 0-2.742 0.277-4.41 0.277-4.444 0.07-0.418-0.035-0.833-0.277-1.181-0.035-0.033-3.543-5.071-3.821-11.738v-0.21c-0.104-5.141 2.571-7.849 7.885-8.058 5.313 0.209 7.954 2.918 7.884 8.058v0.14c-0.277 6.735-3.785 11.773-3.822 11.807-0.241 0.349-0.349 0.764-0.275 1.182 0 0 0.275 1.704 0.275 4.445 0 0.764 0.486 1.389 1.22 1.562 12.921 3.093 16.321 7.188 16.879 7.987 0.312 0.452 0.799 0.695 1.319 0.695 0.349 0 0.658-0.104 0.9-0.279 0.692-0.523 0.867-1.495 0.381-2.227z"/>
+										</svg>
+										<input class="form-element form-field" id="username" name="j_username" type="text" value="" spellcheck="false" type="text" placeholder="USC NetID (username)" novalidate="" maxlength="24" autocapitalize="off" autocorrect="off" autocomplete="off" aria-invalid="false" autofocus required>
+										<div class="tooltip" id="tooltip-netid-first" role="alert"></div>
+										<div class="tooltip" id="tooltip-netid-charset" role="alert"></div>
+										<div class="tooltip" id="tooltip-netid-length" role="alert"></div>
+									</span>
+									<span class="form-field-wrapper">
+										<label for="password">Password</label>
+										<svg class="password" enable-background="new 0 0 35.382 50" version="1.1" viewBox="0 0 35.382 50" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+											<path d="m17.691 27.798c-2.015 0-3.654 1.642-3.654 3.656 0 0.866 0.314 1.651 0.82 2.28v4.686c0 1.573 1.264 2.837 2.834 2.837s2.833-1.261 2.836-2.837v-4.69c0.504-0.627 0.819-1.412 0.819-2.276 0-2.016-1.639-3.656-3.655-3.656z"/>
+											<path d="m33.916 19.467h-3.381v-5.84c0-7.412-5.875-13.627-12.844-13.627-6.967 0-12.841 6.25-12.841 13.627v5.84h-3.382c-0.82 0-1.468 0.649-1.468 1.469v27.594c0 0.822 0.649 1.47 1.468 1.47h32.448c0.818 0 1.467-0.648 1.467-1.47v-27.595c-1e-3 -0.819-0.649-1.468-1.467-1.468zm-25.591-5.84c0-6.387 4.586-10.191 9.366-10.191 4.781 0 9.355 3.805 9.355 10.191v5.84h-18.721v-5.84zm24.12 33.435h-29.507v-24.658h29.508l-1e-3 24.658z"/>
+										</svg>
+										<input class="form-element form-field" id="password" name="j_password" type="password" value="" spellcheck="false" type="password" placeholder="Password" autocorrect="off" autocomplete="off" autocapitalize="off" aria-invalid="false" required>
+									</span>
+									<div class="form-element-wrapper">
+										<button class="form-element form-button" type="submit" name="_eventId_proceed" onClick="this.childNodes[0].nodeValue='Logging in, please wait...'">Sign in</button>
+									</div>
+								</form>
+							</div><!-- .column.one -->
+						</div><!-- .content -->
+					</div><!-- .container -->
+				</div><!-- .wrapper -->
+			</div><!-- .main -->
+			<div class="instructions" role="contentinfo">
+				<p class="assistance"><a class="activate" href="https://netid.usc.edu/account_services/activate_account">Activate new account</a> <span class="right"><a class="forgot-netid" href="https://netid.usc.edu/account_services/forgot_netid">Forgot NetID</a> <a class="forgot-password" href="https://netid.usc.edu/account_services/forgot_password">Forgot password</a></span></p>
+				<p>
+					<h3 class="contentinfo"><strong>To sign out,</strong> close your web browser.</h3> This step will prevent others from accessing your account when you are using a shared computer.
+				</p>
+				<p>
+					<h3 class="contentinfo"><strong>Need help?</strong></h3> Visit <a href="https://itservices.usc.edu/uscnetid/">USC NetID account services</a> or contact the ITS Customer Support Center at <a href="tel:+1-213-740-5555" aria-label="call phone number 2 1 3. 7 4 0. 5 5 5 5">213&#8209;740&#8209;5555</a> or <a href="mailto:consult@usc.edu" aria-label="send email to consult@usc.edu">consult@usc.edu</a>.
+				</p>
+			</div><!-- .instructions -->
+		</div><!-- .content-area.narrow -->
+		<footer>
+			<div class="container container-footer">
+			</div>
+			<script type="text/javascript">
+				window.onload = function() {
+					timeout = [];
+					netid_first_shown = netid_chars_shown = netid_length_shown = false;
+					
+					var usertrim = function() {
+						try {
+							var value = document.getElementById( 'netid' ).value;
+							apos=value.indexOf("@");
+							if ( apos >= 0) {
+								value = value.substring( 0, apos );
+								document.getElementById( 'netid' ).value = value;
+							}
+						}
+						catch (err) {
+						}
+						return true;
+					}
+		
+					// format USC NetID
+					var validateNetIDchars = function(input) { 
+						var re = /^[a-zA-Z0-9\-\_]+$/;
+						return re.test( input );
+					}
+		
+					// first character can only be a letter
+					var validateNetIDfirst = function(input) { 
+						var re = /^[a-zA-Z]$/;
+						return re.test( input );
+					}
+					
+					// length is at least 3 characters and at most 8
+					var validateNetIDlength = function(input) { 
+						var re = /^\w{3,8}$/;
+						return re.test( input );
+					}
+					
+					// all-in-one NetID validation regular expression
+					var validateNetID = function(input) {
+						var re = /^[a-zA-Z][a-zA-Z0-9\-\_]{2,7}$/;
+						return re.test( input );
+					}
+
+					var displayAlert = function( elementId, htmlMessage ) {
+
+						var element = document.getElementById( elementId );
+
+						if ( ! element.classList.contains( 'active' ) ) {
+							element.classList.add( 'active' );
+							element.setAttribute( 'role', 'alert' );
+							element.setAttribute( 'aria-value', 'Error: ' + htmlMessage );
+							element.innerHTML = htmlMessage;
+						}
+
+						if( timeout[elementId] ) {
+							clearTimeout( timeout[elementId] );
+						}
+
+						timeout[elementId] = setTimeout( function() {
+							element.classList.remove( 'active' );
+							element.innerHTML = '';
+							element.removeAttribute( 'role' );
+							element.removeAttribute( 'aria-value' );
+						}, 2500 );
+					}
+		
+					var netIdKeyUp = function() {
+
+						netid = document.getElementById( 'username' );
+						val = netid.value;
+						var first = val.substr( 0, 1 );
+						
+						if ( val && val.length > 0 ) {
+
+							if ( ! validateNetIDfirst( first ) && val.length === 1 ) { // show alert if the first character isn't a letter
+								if ( ! netid_first_shown ) {
+									displayAlert( 'tooltip-netid-first', '<span class="tooltip-content"><span class="error" role="img" aria-label="error">!</span>The first character must be a letter.</span>' );
+									netid_first_shown = true;
+								}
+							} else {
+								netid_first_shown = false;
+							}
+		
+							if ( ! validateNetIDchars( val ) && val.length > 1 ) { // show alert if there is an invalid character
+								if ( ! netid_chars_shown ) {
+									displayAlert( 'tooltip-netid-charset', '<span class="tooltip-content xl"><span class="error" role="img" aria-label="error">!</span>Can contain only letters, numbers, hyphens, and underscores.</span>' );
+									netid_chars_shown = true;
+								}
+							} else {
+								netid_chars_shown = false;
+							}
+
+						} else {
+							netid_first_shown = netid_chars_shown = netid_length_shown = false;
+						}
+					}	
+		
+					var netIdBlur = function() {
+
+						netid = document.getElementById( 'username' );
+						val = netid.value;
+		
+						if ( val && val.length > 0 ) {
+							if ( ! validateNetIDchars( val ) && val.length > 1 ) { // show alert if there is an invalid character
+								netid_chars_shown = true;
+								displayAlert( 'tooltip-netid-charset', '<span class="tooltip-content xl"><span class="error" role="img" aria-label="error">!</span>Can contain only letters, numbers, hyphens, and underscores.</span>' );
+							} else if ( ! validateNetIDfirst( val.substr( 0, 1 ) ) && val.length === 1 ) { // show alert if the first character isn't a letter
+								netid_first_shown = true;
+								displayAlert( 'tooltip-netid-first', '<span class="tooltip-content"><span class="error" role="img" aria-label="error">!</span>The first character must be a letter.</span>' );
+							} else if ( ! validateNetIDlength( val ) ) { // show alert if the NetID is too short or long
+								netid_length_shown = true;
+								displayAlert( 'tooltip-netid-length', '<span class="tooltip-content"><span class="error" role="img" aria-label="error">!</span>Must be 3 to 8 characters long.</span>' );
+							}
+						} else {
+							netid_first_shown = netid_chars_shown = netid_length_shown = false;
+						}
+
+					}
+					
+					document.forms.loginform.onsubmit = function() {
+						usertrim();
+					}
+
+					netid = document.getElementById( 'username' );
+
+					netid.onblur = function() {
+						usertrim();
+						netIdBlur();
+					}
+
+					netid.onkeyup = function() {
+						netIdKeyUp();
+					}
+					//netid.focus(); // focus the username field
+				}
+				</script>
+			</footer>
+		</div><!-- .page-wrapper -->   
+ 	</body>
+</html>O/¯P5      cíGtcíGtEC—l       9    ~1676494690,:https://login.usc.edu/login/authuserpassword necko:classified 1 strongly-framed 1 security-info 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 request-method POST response-head HTTP/2.0 200 OK
+date: Wed, 15 Feb 2023 20:58:30 GMT
+content-type: text/html;charset=UTF-8
+content-language: en-US
+server: I am a teapot
+X-Firefox-Spdy: h2
+ original-response-headers date: Wed, 15 Feb 2023 20:58:30 GMT
+content-type: text/html;charset=UTF-8
+set-cookie: AWSALB=nZEv5Hpe0MdG4buVDEIQU0IWqaAJPSqz+tsrn3cn9by06oOuIoe/SZL6S+C0fTeAnDF0EzJNrxJQEIcViePbG1TV+asww7deM92ukfK3V334msQsP0IMKY3edRUM; Expires=Wed, 22 Feb 2023 20:58:29 GMT; Path=/
+set-cookie: AWSALBCORS=nZEv5Hpe0MdG4buVDEIQU0IWqaAJPSqz+tsrn3cn9by06oOuIoe/SZL6S+C0fTeAnDF0EzJNrxJQEIcViePbG1TV+asww7deM92ukfK3V334msQsP0IMKY3edRUM; Expires=Wed, 22 Feb 2023 20:58:29 GMT; Path=/; SameSite=None; Secure
+content-language: en-US
+server: I am a teapot
+X-Firefox-Spdy: h2
+ uncompressed-len 0 net-response-time-onstart 138 net-response-time-onstop 139   *ü

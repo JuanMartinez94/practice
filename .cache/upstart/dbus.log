@@ -1,0 +1,8 @@
+Activating service name='org.gnome.Terminal'
+Successfully activated service 'org.gnome.Terminal'
+Activating service name='org.gnome.Terminal'
+Successfully activated service 'org.gnome.Terminal'
+Activating service name='org.gnome.Terminal'
+Successfully activated service 'org.gnome.Terminal'
+Activating service name='org.freedesktop.systemd1'
+Activated service 'org.freedesktop.systemd1' failed: Process org.freedesktop.systemd1 exited with status 1

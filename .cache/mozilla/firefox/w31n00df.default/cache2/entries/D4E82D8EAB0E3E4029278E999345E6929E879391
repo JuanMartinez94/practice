@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en" class="gr__shibboleth_usc_edu">
+  	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!--<title>Shibboleth Identity Provider - Duo Authentication</title>-->
+		<title>Please confirm your identity</title>
+		<link rel="icon" href="./images/favicon.ico">
+		<link rel="stylesheet" href="./style/login-light.css?v=1.1.5" type="text/css" media="screen,print">
+		<link rel="stylesheet" href="./style/sprite-light.css?v=1.1.5" type="text/css" media="screen,print">
+
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" media="all" href="./style/ie.css">
+		<![endif]-->
+		<style type="text/css">
+			@media only screen and (max-height: 48rem) {
+				.brand-title {
+					margin-bottom: 1.5rem;
+					padding-top: 0;
+				}
+				
+				.summary {
+					display: none;
+				}
+			}
+		</style>
+
+		<script type="text/javascript">
+			function appendDuoFrame() {
+				var duo_iframe1 = document.getElementById('duo_iframe');
+				duo_iframe.parentNode.removeChild(duo_iframe1);
+
+				var iframeParent = document.getElementById('iframeparent');
+				iframeParent.appendChild(duo_iframe1);
+			}
+			
+			/* Updates the value of remember me input when the user checks and unchecks the RememberMe checkbox*/
+			 function updateRememberMe(chkRemMe) {
+				var  rememberMe = document.getElementById("remembermeinput");
+				rememberMe.value = chkRemMe.checked ? "true" : "false";
+			 }
+		</script>
+  	</head>
+  	<body data-gr-c-s-loaded="true">
+		<div class="page-wrapper">
+			<header class="site-header">
+				<div class="site-branding">
+					<h1 class="brand-title" role="img" aria-label="University of Southern California Logo">University of Southern California</h1>
+				</div><!-- .site-branding -->
+			</header>
+			<!--style="text-align: center;"-->
+  			<div class="content-area wide">
+    			<div class="main" role="main">
+      				<h2>Please verify your identity</h2>
+					<p class="summary">Duo two-factor authentication is now required for all students, faculty and staff. If you have not already enrolled in Duo, press the Start setup button below to continue.</p>
+					<p class="summary">For assistance, please contact the ITS Customer Support Center at <a href="tel:+1-213-740-5555" aria-label="call phone number 2 1 3. 7 4 0. 5 5 5 5" tabindex="1">213-740-5555</a>.</p>
+					<div class="loginbox">
+						<div class="leftpane">
+							<div id="iframeparent" class="content">
+								<form id="duoformid" action="/login/authduo" method="post" class="form login col-sm-6 col-sm-offset-3" style="padding: 0 0 .5rem" autocomplete="off" data-stage="">
+									<input type="hidden" id="duo_response" name="duo_response" aria-hidden="true" value="">
+									<input type="hidden" id="callback_object" name="callback_object" aria-hidden="true"  value='jNxVubni9Fk3BKmPjuorV3dudir2StDosHXhME5G/ZSsT1N1t8lstz5k63qVsjXA6a+vrGkcRsPgudy2eR8Om5tuiupb091GK08s5cayOGUg/afBeKf7odVkC0JwqdCfnJe2Iy3A2V3C1gnGK5owB32IUIbU92NF2FwgT+iDbt2N6HNTyUojwL9XllF1c8Yek0yPMFaoI4MXSvkAUZoWejyfJoLWE33Xq5eMlVPDBDdj/uL4hy6fW+zaAeiFxnL8oNKJFDnI+wPkqlnSUIoY8CimL8nkSoaib8zdWOzHt2MQWsvZlUyRnSfNG3Apyl1Ad4WrL3yO7RSVBrqHkMkd7x55yulk/mGHWNlO0xtT0b/6v6meL9IzVWrS9Wh9sunDPKNNyiMbFqtn6Z/9uIwIjFreQowNpxGp5Gwna+QgtJ+u9JrWnxaSkFjpNAlaCjkkQ+fF/9jUxOcYaAWKxTB3DUYg/f75wg8YAufRbV2UrswC4AqNzzCRUW2JrwD+i9KXGkgCEKkbA5TaG1u3fkDa4PHmmIEiDY+UUeIrQHSM4EK6Hq++miyJPyAyf9Ivm3Z99yWjGBBWtOi9H9smO4k50GvIt7ItgVnt2HsKhhWIA2Zj5R1o4jLDw7rLPRNr2+980KnPPYqQeYGExZFH+EtQaTc3aA5dBSGhN1wF0TUXMEKkgeUrlUi+JNbKHkE0K0WmCV1Rvc341jpDgqUSjxzprnLdVzt99b6nRHlw+0QLPHZ6qOJVOLIj0uFOPdqYGAB4xc7TH/c0abjwWWBYagy//wDAwLgqyXIWhGqh7GWKZ6p564zo7Fc7rXT/43YAOaUB8Uv6d3GDttSoDE+h627ytjo6JY+6lyg/gCu2tdMaoi66pJ1rtMLTrqKIdeEiP9mEE9cY+m8shox9boFcCDyCgapnOrYbCEGEAX7E6Dvj2vYmLwYDRvUuUlk3yFLLHE3Cw1X/Hmhb/LCgSi/MURVxD93svvYMl++zdJAZTQ67x4JdHEtbGR7XqB2Dn3CPdJPj515uuOO/GZV7t13xae0FqtcAJwwuqoR8M8enctYj4s/kBmOWo4ewmOkVqbGMC0Ylo3nhEHV45B5y7XHpodCNRj4XCf6O/yQYHHarOcCJS/O/rmFeN4vAbYmw0CfI+2g2IsNMAXzJQsLEhQeQg5op3K8mChSDUPQO6d5aXznmoMcM57cva+EOnWaMWREHoRRb2IxmuzhUjgJNaBMUHrCcDEviYtaJazdguSa6v8T4qv8EqyonuSgJzRJm57T263ESp7KmmUar9hbhpx9EintF/+zowUi8gnRVrG9hkmokWbxJFRZaez7TtojhNa8GXpx1sQwqwNoHi6BFNz6HtXJlcgIRLNF7+wmosM1+NA00LTGPb+r1jdgG3rI8qd0rwH4++B0stomFeGjIQZu4jRdwOoGdqN3GbYdGEXXmS9T2TLlOiUr0ENoXblq+QFwHKWbHo9EMfCkrEihXe5d3fHWnglJkPOnhIYoSXGPoT5p+TTiWb5RNodDOXZB2nNrJ3NBpcPzs1ZlzBy2VT2/wFy/FOTlMc5d3r6KA5a5bhwr4pp0o0iVuuoJwRsYUXGKQzru6ebYnCv2AZCC0Ti7BNWrcYwvq8y55jK1hxm0uDuV7+GdovfDRoJi9RxJpzi8FyHpyyxj5RXf3xwi7qgmyEtP/+w6RzPqLzK1pUBE/rP5hDZXLMRqJnl/8QK/YmmoqPdtNCdfuIGJ51dH1COU/AOsPlrGvUW8GtWPZ3UFhpgjXxbjRGwDQzgvSDw68yM51WsvvU99E/c88p2Q6j0YM7wxd6ejpTeIXJIDr+F7Yp3J/myMJM5oKzJeExI3perJHlcfNJWDoLwloVVV142c0i/GsV4JXEaZA661vfz3SiDYEHaRR/hwTwFqMghfgOTmPEl1+ESQ9RWT/AXab9dHMnDn1gdly8bELpZDPyudHSz/ToBrV/hoIk1fnnq5uqQXLneFm3iwYuVWiRRi0cgW3CltmuYy/dccKgyq3AmNPyMum4N5EVIxLFphMqrGfkr6a3jcspw+KH1gBLvZdeeXLTHgPgLjT6gp3AUTMr/QM3dtfQRH10bup64pKRdnVoEMT0hJ/klJH0G/IHr3lWYChFx6j3QYZaVyPLUBwnLVpl3KflzT//bn0DsgYQAY4cftN8wY+Kfz7MGhI/3fXkBvGSwaqhzsXLdcgZEeMg35ddNq7U9r5Zfr75TkSFZoFtycXEyfLbb/FjFKy1WfkVU+vEqc+9ueDH4wHl9MRtIZlkeRwENgs1MRGzRZAT/asVLhu8h8j9LARLuwrRGIhn6zNj84hoAiKvrjBYW6xcbUR7uMEL38CDEtDdc4r+b8gtsLP9Oqgo23aE5PUWCwpZo62zCx99xprw+/9Fvf7rfcebndf5A61UWZ2XCn8yC2ty1m/01/8GOU/7v+xfuqJ9Hqqaqcf7VzCIVIal3iGtNt7PMna9sgqiK4hgEQTqAbmKd7FSR7r3B/82OvbVf5uhY5xdVoB3YstiKr+f0R/qBaWsvk3IIL4xD46JVZk4o+9A013hUSDCfA//PmDHhHDI2uzoSYxV0sPxCVa/ROR398zLC8G7W24ZAIZu/IOf/dk/02VFxOR4gGka+VV4NaKJD76pcvufLy/MHQ7+tept4i+KKEXZvGrSd288fULWgB2Lqk+0TbHoKHUsguJ34DURX/8ge+NGZ3AG88XVMmDFMpqswxV09uvuoDVZ35kDKjBDXe2pVeh/sl0x+IH0wx9srmtPQonG11GOHMP4qQ9b+7+iPwKrGzh96UU107QrE9KVOFX2N+HhPZgnjsyQYNX3msf5TsCVUvVhDr+QV51gJBVHXsPVN+0DwuizqNXU4lmid6XuTiUVFX8mdLQNxzIFmFcO8pAJ9Saaef9ANcW9MY25z5cxnzgs/Da68U1WBlhvKuiPkFw0lH79Nmjwi/FeZAAjiIv24v9dTlZRVk///9aNGrfZLA1gabiLJemrmLwNMkyOoN2R3ReZO4tsLF4LJlkJlvh3vhWNw4k3rPlagnLREK9jVdtbr7fAB3g9UhTi0k3MqxhngRRBlMeiYUcLATGIxxbaWWzZ3POQs9HbsD49Lvl85LRGRQCIhrxwS/SLc2JlKkbVhDGgKJzeZywe7DRQZO00QnJfDjiaNIe1x4WmG4nnwpRsnZCSH1LT2EYILLtz3fm6Rq6SRyJV17eoevfqNADcMQejUTay0NnaY+T0nRSc+6us5FvSYHii/cSCzCJHfJETyuFA36bUo4OAyrDCtgj4YXH6M7ZwO1nAh7XoMJZP5r8jrjBF97AT+DwduHz03hIXfeiWmCcCYgb34oNfbortNIK4q8069SVes5RI2yFJBJXbOuB5IvkUNja1hgnc5YObaTlTOY/+H+58aOqVMRpRa8ObhkV6JODZvFwrPJMrOlxnKSd7zprthWRJtlF1flGHZlg+0AdWZ3pPT2HoMkAFULkMREjw49uJat0vteZEGgdt99jb8AvGhWfTBO0aqs0boAO4Tfdmqjo+cskgoe8Yfh7xXK2VdkPtK7DJt0sAqMXrKPMDUV67iXBUciTrS3iP1xUxZVIFR68LBQRE35Te4loNakURcEGfLlS7YkYTqV9wVezFzJJQK8e7BTqdisK1QomfKYRSgbWJbZjvdvckEfRRv3jnjucpZW6uX+u6X4/y2WTmRPSsKPqUlvHKB14GBbsW2lTyLQPWljRshsRC0I/gLHZxbvYRGEA69sNro6T77qOPIX67GvVqVq/f2nDp9K33AzbO5M9jyEx9vqzvGkvn0ZA2FCh47QSx1gXI7Qa+W4z1SVpSQaKpTvEz0Zal5NekSIk75j9m3em/agpS2Hen1ULu5CCsVntIaHAOS+ggYw0lJgx6MZ20nF8w3d9W6g39Z1zTWVKrzDus3JKeJB/ccrNMOVZ4aaDEi1Aj18AKv4u94VPDMlZv3ZOQwTyYVY2vLPP5DIS4WeC354TOL/huN3piOgrMfHg+74c4GNeLAv2DcHRRvBZYaDsGAOjdoU0rwbJMNwV16Q2+XqXuaS+Tno4lT+B6TZSNDncIc4Wp1oz/WD6Xtv88csMlhdmzEr8/7sLyNpooAY4A1Yk4PBg6q9bKGkE6JyNRFkJCN1Oi0sI5T5Z8zH/xpPjMdvd/MiY6N8SnP/SA9UbxVCOzy2aqcyD4Ep4+aOEwSUtrKcwQ1BfG2NCDa1YO+Iu5WWQzO5+Nj/8uW7I+7Bowp1eFgs9My3kHJbPUccJvVVP47fVbslOHOtt7VgUc5X25LgZqaaxEKbjbWcBVxWPSew68v3SjsRJVGjjkYI32BQk1vcyPzT+OtM1+JKpWzKS39DtCzDXVfWKRzOYrLEWtu6f07qwG/Yp+vnmIdAqImKVHaupd1jkLSJhfRu7HYiwjF4mxAbsPVJcgrr2cMErvx4As53yvRH01i6CxHiyGzj0bb41VWOBKRFbdARNRt/8aPrWyOdnwsZSu4cjyeTxn7nEr8uRQqz8u5WehGh43nOfksSgPIwIXZRDkC/M1/EZIhojEGRSJl7m/ZL6X0d0/YgI67ATycj95upZ+sFnuSvkt1WDLpNLNbrDzBfMgjstGu09T3U/P4d2DpzRCtJUGb+8AG2FAvYB9iRjFXUmi9eHiGdDf8n6F5NaaU6LL+PUHLcIBOknwhDs8hxlrmDs4UXF2HOkBeQFCHXR3WDjxQU3rjjt6Xf0NetYicXZakBqsKtWUfK0yVV/dMMj1jX6EW0OnodnWj63UojgysShUFTRbLdWc4aLiNFePqHRCwSNvFUD3D8rBWVBncghP5JG1qmtdjmyDowsecK+tIIeIbbqFrv565DSwFJF5wPvUjzOlgv83eepNjTBZu2mh8uXFObOnTrHNWPOXW3Nor0LuWsHFR9xK1RaER4d9IjVnaaeJjYpGI4Y/A=='>
+									<input type="hidden" id="remembermeinput" name="remembermeinput" aria-hidden="true" value="false">
+									<button id="loginButton_0" class="form-element form-button" type="submit" name="_eventId_proceed">Sign in</button>
+								</form>
+		
+								<script>
+ 
+									var script = document.createElement('script');
+document.getElementById('loginButton_0').style.display = 'none';
+var duo_iframe = document.createElement('iframe');
+duo_iframe.setAttribute('id', 'duo_iframe');
+function duoCallback(response) {var duo_iframe = document.getElementById('duo_iframe'); duo_iframe.parentNode.removeChild(duo_iframe); document.getElementById('duo_response').setAttribute('value', response.elements.sig_response.value); document.getElementById('loginButton_0').click();};
+duo_iframe.setAttribute('data-submit-callback', duoCallback);
+script.src = 'https://api.duosecurity.com/frame/hosted/Duo-Web-v2.min.js';
+duo_iframe.style.cssText = 'width: 100%;  min-width: 304px; max-width: 620px; height: 330px; border: none; display:block; margin: auto;';
+document.body.appendChild(duo_iframe);
+script.onload = function() {Duo.init({'host': 'api-22627695.duosecurity.com','sig_request': 'TX|anVhbmFtYXJ8REkwTUtMQU5CNFFYMFgzTjA3MDV8MTY3NjQ5NTAyMw==|dbdd11bfb4a235703145e793a3ce17a9b8e01478:APP|anVhbmFtYXJ8REkwTUtMQU5CNFFYMFgzTjA3MDV8MTY3NjQ5ODMyMw==|864934f5d5aa8c40626625b88860a606b189361d','submit_callback': duoCallback});};
+document.body.appendChild(script);
+
+									
+									appendDuoFrame();
+								</script>
+ 
+							</div>
+						</div>
+					</div>
+					<div class="duo-rm">
+						<input class="duo-rm-input" id="duo_rm_input" type="checkbox" tabindex="2" checked onclick="updateRememberMe(this)">
+						<label for="duo_rm_input">Remember my browser for 7 days</label>
+					</div>
+				</div>
+  			</div>
+          	<!--[if IE 8]>
+                <script>
+    forceInitDuo = function() {
+	for(var i=0; i<document.scripts.length; i++) {
+	    var src=document.scripts[i].src;
+	    if (src && src.indexOf("https://api.duosecurity.com")>=0){
+		document.scripts[i].onload();
+	    }
+	}
+    };
+    try {
+	setTimeout(forceInitDuo, 2000);
+    }
+    catch (e){}
+            </script>
+            <![endif]-->
+		</div>
+		<script>
+			updateRememberMe(document.getElementById("duo_rm_input"));
+		</script>
+		
+	</body>
+</html>
+‘ÏýWÅT      cíG‚cíG‚EC—v       9    ~1676494691,:https://login.usc.edu/login/authuserpassword necko:classified 1 strongly-framed 1 security-info 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 request-method POST response-head HTTP/2.0 200 OK
+date: Wed, 15 Feb 2023 20:58:43 GMT
+content-type: text/html;charset=ISO-8859-1
+content-language: en-US
+server: I am a teapot
+X-Firefox-Spdy: h2
+ original-response-headers date: Wed, 15 Feb 2023 20:58:43 GMT
+content-type: text/html;charset=ISO-8859-1
+set-cookie: AWSALB=NIg7QMuUp+chSqERQIyQA2q7vzkUqZvh0moEcjKhS/NclofhJgqx1nkjW6F66a4QQqVJnHErmeytTpFFMV0qtUKSNVS9jaN+xTqGDFMHikCdo2EPdrMGXPduS2IV; Expires=Wed, 22 Feb 2023 20:58:43 GMT; Path=/
+set-cookie: AWSALBCORS=NIg7QMuUp+chSqERQIyQA2q7vzkUqZvh0moEcjKhS/NclofhJgqx1nkjW6F66a4QQqVJnHErmeytTpFFMV0qtUKSNVS9jaN+xTqGDFMHikCdo2EPdrMGXPduS2IV; Expires=Wed, 22 Feb 2023 20:58:43 GMT; Path=/; SameSite=None; Secure
+content-language: en-US
+server: I am a teapot
+X-Firefox-Spdy: h2
+ uncompressed-len 0 net-response-time-onstart 439 net-response-time-onstop 445   '¿

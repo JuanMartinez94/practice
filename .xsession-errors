@@ -1,0 +1,4 @@
+openConnection: connect: No such file or directory
+cannot connect to brltty at :0
+upstart: unity7 main process (1959) killed by SEGV signal
+upstart: unity7 main process ended, respawning
