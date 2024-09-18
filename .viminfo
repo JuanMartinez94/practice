@@ -8,6 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
+:q!
 :wq
 
 # Search String History (newest to oldest):
@@ -25,18 +26,19 @@
 	~
 
 # File marks:
-'0  6  1  ~/ee355/lab5part1/lab-5-part1-JuanMartinez94/6506332664Lab5.sh
-'1  21  0  ~/ee355/returnref.cpp
-'2  1  0  ~/ee355/lab1/lab-1-JuanMartinez94/test.py
-'3  1  12  ~/ee355/lab1/lab-1-JuanMartinez94/first.py
-'4  1  0  ~/.ssh/id_ed25519.pub
-'5  1  27  ~/.valgrindrc
-'6  3  19  ~/temp/test.cpp
-'7  9  0  ~/temp/test.cpp
-'8  12  0  ~/.valgrind.gcc.supp
-'9  2  0  ~/.valgrindrc
+'0  1  0  ~/ee250/Labs/lab02/lab-02-grovepi-sensors-JuanMartinez94/file.txt
+'1  6  1  ~/ee355/lab5part1/lab-5-part1-JuanMartinez94/6506332664Lab5.sh
+'2  21  0  ~/ee355/returnref.cpp
+'3  1  0  ~/ee355/lab1/lab-1-JuanMartinez94/test.py
+'4  1  12  ~/ee355/lab1/lab-1-JuanMartinez94/first.py
+'5  1  0  ~/.ssh/id_ed25519.pub
+'6  1  27  ~/.valgrindrc
+'7  3  19  ~/temp/test.cpp
+'8  9  0  ~/temp/test.cpp
+'9  12  0  ~/.valgrind.gcc.supp
 
 # Jumplist (newest first):
+-'  1  0  ~/ee250/Labs/lab02/lab-02-grovepi-sensors-JuanMartinez94/file.txt
 -'  6  1  ~/ee355/lab5part1/lab-5-part1-JuanMartinez94/6506332664Lab5.sh
 -'  1  0  ~/ee355/lab5part1/lab-5-part1-JuanMartinez94/6506332664Lab5.sh
 -'  21  0  ~/ee355/returnref.cpp
@@ -134,10 +136,14 @@
 -'  1  27  ~/.valgrindrc
 -'  3  19  ~/temp/test.cpp
 -'  1  0  ~/temp/test.cpp
--'  9  0  ~/temp/test.cpp
--'  12  0  ~/.valgrind.gcc.supp
 
 # History of marks within files (newest to oldest):
+
+> ~/ee250/Labs/lab02/lab-02-grovepi-sensors-JuanMartinez94/file.txt
+	"	1	0
+	^	61	0
+	.	62	0
+	+	62	0
 
 > ~/ee355/lab5part1/lab-5-part1-JuanMartinez94/6506332664Lab5.sh
 	"	6	1
